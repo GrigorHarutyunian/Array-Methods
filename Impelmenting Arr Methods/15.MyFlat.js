@@ -7,7 +7,7 @@ const myFlat = (arr, n) => {
   const newArr = [];
   for (let x = 0; x < arr.length; x++) {
     if (Array.isArray(arr[x])) {
-      newArr.push(...myFlat(arr[x], --n));
+      newArr.push(...myFlat(arr[x], n - 1));
     } else {
       newArr.push(arr[x]);
     }
